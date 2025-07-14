@@ -1,0 +1,280 @@
+/* === RESET & DASAR === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', 'Poppins', sans-serif;
+  background: linear-gradient(to bottom, #f4f7fb 0%, #ffffff 60%);
+  color: #2d2d2d;
+  line-height: 1.6;
+  padding-bottom: 60px;
+}
+
+a {
+  color: #4f709c;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* === HEADER === */
+header {
+  /* yang sudah ada */
+  background: linear-gradient(to right, #4f709c, #7d9bbd);
+  color: white;
+  padding: 30px 20px 60px; /* ubah padding bawah agar lebih besar */
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin-bottom: 30px; /* tambahkan batas bawah */
+}
+
+
+header h1 {
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+header nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 15px;
+}
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
+
+header nav a {
+  color: white;
+  font-weight: 500;
+  margin: 0 12px;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+header nav a:hover {
+  color: #f0f8ff;
+  text-shadow: 0 0 5px rgba(255,255,255,0.7);
+  transform: scale(1.05);
+}
+
+/* === SECTION === */
+section {
+  background: white;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+}
+
+section h2 {
+  color: #4f709c;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+section ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+section p, section li {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+section .note {
+  font-style: italic;
+  background: #e9f0f8;
+  padding: 10px 15px;
+  border-left: 4px solid #4f709c;
+  border-radius: 6px;
+  margin-top: 25px;
+}
+
+/* === CTA BUTTON === */
+.cta-button {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 22px;
+  background-color: #4f709c;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.cta-button:hover {
+  background-color: #3b5c86;
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* === TABEL === */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+table th, table td {
+  padding: 14px 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+table th {
+  background: #f0f6fc;
+  color: #333;
+}
+
+/* === FOOTER === */
+footer {
+  margin-top: 80px;
+  padding-top: 30px;
+  background: #4f709c;
+  color: white;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+
+/* === RESPONSIF MOBILE === */
+@media (max-width: 600px) {
+  header nav a {
+    display: block;
+    margin: 8px 0;
+  }
+
+  section {
+  /* sudah ada */
+  background: white;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 40px; /* tambahkan jarak antar section dan footer */
+}
+
+
+  .cta-button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* === ILUSTRASI (HERO IMAGE) === */
+.hero-img {
+  max-width: 100%;
+  height: auto;
+  margin: 20px 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* === QUOTE HARIAN === */
+.quote-box {
+  background: #eef4fc;
+  border-left: 5px solid #4f709c;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 40px auto;
+  max-width: 800px;
+  text-align: center;
+}
+
+.quote-box blockquote {
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* === ANIMASI FADE IN === */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.9s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* === SPLIT HERO LAYOUT === */
+.split {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.split .intro-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.split .intro-img {
+  flex: 1;
+  text-align: center;
+}
+
+.split .intro-img img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 14px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+  .split {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .split .intro-text {
+    order: 2;
+  }
+
+  .split .intro-img {
+    order: 1;
+  }
+}
+
+/* === FITUR (CARD GRID) === */
+.fitur ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+.fitur li {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.fitur li:hover {
+  transform: translateY(-4px);
+  background: #f5faff;
+}
